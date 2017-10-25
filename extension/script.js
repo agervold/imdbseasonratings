@@ -10,7 +10,7 @@ $(".info").each(function(i, info) {
             var rating = $(doc).find(".ratingValue strong").text();
             totalRating += parseFloat(rating.replace(",","."));
             $($(info.previousElementSibling).find("div")[0]).append(`<div style='top:0'>${rating}</div>`);
-            if (++counter == len) $("#episode_top")[0].innerText += ` - ${(totalRating/$(".info").length).toFixed(1)}`;
+            if (++counter == len) $("#episode_top")[0].innerHTML += ` - <span title='Average Season Rating'>${(totalRating/$(".info").length).toFixed(1)}</span>`;
         });
     })(i, info);
 });
