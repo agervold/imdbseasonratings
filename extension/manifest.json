@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "IMDb Season Ratings",
+  "description": "Shows you the rating for each episode on a seasons Episode List on IMDb.",
+  "version": "1.3.1",
+  "icons": { "16": "icon.png",
+           "48": "icon.png",
+          "128": "icon.png" },
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+		"default_title": "IMDb Season Ratings"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.imdb.com/title/*/episodes*"],
+      "js": ["jquery-3.2.1.min.js", "script.js"]
+    },
+    {
+      "matches": ["http://imdb.fwra.me/"],
+      "js": ["checker.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
