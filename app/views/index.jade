@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        title YouTubeRelist
+        meta(name="author", content="Frederik Agervold")
+        meta(charset="UTF-8")
+        link(rel='shortcut icon', href='/images/favicon.ico', type='image/x-icon')
+        link(rel='icon', href='/images/favicon.ico', type='image/x-icon')
+        link(rel='stylesheet', href='/stylesheets/stylesheet.css')
+        link(rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/mloookpdikocbpdmcahfmchdcjcmklhl")
+    body
+        //-
+            svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="fwraMenu" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve")
+                path(fill-rule="evenodd" fill="rgb(50,50,50)" clip-rule="evenodd" d="M32,160h128V32H32V160z M192,160h128V32H192V160z M352,32v128h128V32H352z     M352,320h128V192H352V320z M352,480h128V352H352V480z M192,480h128V352H192V480z M32,480h128V352H32V480z M32,320h128V192H32V320    z M192,320h128V192H192V320z")
+        img#logo(src="/images/icon.png")
+        h1 IMDb Season Ratings
+        h3 A Chrome extension for displaying season ratings on IMDb
+        button(onclick="chrome.webstore.install()") Add Chrome Extension
+        script(src="/scripts/jquery-3.2.1.min.js")
+        script(src="/scripts/script.js")
